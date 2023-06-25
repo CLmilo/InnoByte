@@ -1,0 +1,7 @@
+backend/.env
+backend/archivos/
+backend/imagenes_nft/
+backend/experimental/
+frontend/node_modules/
+frontend/truffle-config.js
+

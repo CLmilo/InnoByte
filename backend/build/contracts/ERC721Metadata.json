@@ -1,0 +1,3376 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "named",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "symbolified",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [],
+      "name": "name",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "interfaceID",
+          "type": "bytes4"
+        }
+      ],
+      "name": "supportsInterface",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "symbol",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "allSourcePaths": {
+    "0": "contracts/ERC165.sol",
+    "12": "interfaces/IERC721Metadata.sol",
+    "4": "contracts/ERC721Metadata.sol",
+    "9": "interfaces/IERC165.sol"
+  },
+  "ast": {
+    "absolutePath": "contracts/ERC721Metadata.sol",
+    "exportedSymbols": {
+      "ERC165": [
+        54
+      ],
+      "ERC721Metadata": [
+        623
+      ],
+      "IERC165": [
+        932
+      ],
+      "IERC721Metadata": [
+        1011
+      ]
+    },
+    "id": 624,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 567,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".10"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:24:4"
+      },
+      {
+        "absolutePath": "interfaces/IERC721Metadata.sol",
+        "file": "../interfaces/IERC721Metadata.sol",
+        "id": 568,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 624,
+        "sourceUnit": 1012,
+        "src": "59:43:4",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "contracts/ERC165.sol",
+        "file": "./ERC165.sol",
+        "id": 569,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 624,
+        "sourceUnit": 55,
+        "src": "103:22:4",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 570,
+              "name": "IERC721Metadata",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 1011,
+              "src": "154:15:4"
+            },
+            "id": 571,
+            "nodeType": "InheritanceSpecifier",
+            "src": "154:15:4"
+          },
+          {
+            "baseName": {
+              "id": 572,
+              "name": "ERC165",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 54,
+              "src": "171:6:4"
+            },
+            "id": 573,
+            "nodeType": "InheritanceSpecifier",
+            "src": "171:6:4"
+          }
+        ],
+        "canonicalName": "ERC721Metadata",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 623,
+        "linearizedBaseContracts": [
+          623,
+          54,
+          932,
+          1011
+        ],
+        "name": "ERC721Metadata",
+        "nameLocation": "136:14:4",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 575,
+            "mutability": "mutable",
+            "name": "_name",
+            "nameLocation": "199:5:4",
+            "nodeType": "VariableDeclaration",
+            "scope": 623,
+            "src": "184:20:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_storage",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 574,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "184:6:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "visibility": "private"
+          },
+          {
+            "constant": false,
+            "id": 577,
+            "mutability": "mutable",
+            "name": "_symbol",
+            "nameLocation": "225:7:4",
+            "nodeType": "VariableDeclaration",
+            "scope": 623,
+            "src": "210:22:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_storage",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 576,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "210:6:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "visibility": "private"
+          },
+          {
+            "body": {
+              "id": 605,
+              "nodeType": "Block",
+              "src": "299:177:4",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "commonType": {
+                              "typeIdentifier": "t_bytes32",
+                              "typeString": "bytes32"
+                            },
+                            "id": 593,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "leftExpression": {
+                              "arguments": [
+                                {
+                                  "hexValue": "6e616d652862797465733429",
+                                  "id": 588,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "kind": "string",
+                                  "lValueRequested": false,
+                                  "nodeType": "Literal",
+                                  "src": "358:14:4",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_stringliteral_7feaf19471f34a12a7eaf32d5f3090aa2260ea8624dc8a138e74e0bf0f623076",
+                                    "typeString": "literal_string \"name(bytes4)\""
+                                  },
+                                  "value": "name(bytes4)"
+                                }
+                              ],
+                              "expression": {
+                                "argumentTypes": [
+                                  {
+                                    "typeIdentifier": "t_stringliteral_7feaf19471f34a12a7eaf32d5f3090aa2260ea8624dc8a138e74e0bf0f623076",
+                                    "typeString": "literal_string \"name(bytes4)\""
+                                  }
+                                ],
+                                "id": 587,
+                                "name": "keccak256",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": -8,
+                                "src": "348:9:4",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                                  "typeString": "function (bytes memory) pure returns (bytes32)"
+                                }
+                              },
+                              "id": 589,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "functionCall",
+                              "lValueRequested": false,
+                              "names": [],
+                              "nodeType": "FunctionCall",
+                              "src": "348:25:4",
+                              "tryCall": false,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_bytes32",
+                                "typeString": "bytes32"
+                              }
+                            },
+                            "nodeType": "BinaryOperation",
+                            "operator": "^",
+                            "rightExpression": {
+                              "arguments": [
+                                {
+                                  "hexValue": "73796d626f6c2862797465733429",
+                                  "id": 591,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "kind": "string",
+                                  "lValueRequested": false,
+                                  "nodeType": "Literal",
+                                  "src": "386:16:4",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_stringliteral_13b182f4c0e5b2efbac0efe6cf6d756c8b89f4b79c5707a043ed9ea740574ee9",
+                                    "typeString": "literal_string \"symbol(bytes4)\""
+                                  },
+                                  "value": "symbol(bytes4)"
+                                }
+                              ],
+                              "expression": {
+                                "argumentTypes": [
+                                  {
+                                    "typeIdentifier": "t_stringliteral_13b182f4c0e5b2efbac0efe6cf6d756c8b89f4b79c5707a043ed9ea740574ee9",
+                                    "typeString": "literal_string \"symbol(bytes4)\""
+                                  }
+                                ],
+                                "id": 590,
+                                "name": "keccak256",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": -8,
+                                "src": "376:9:4",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                                  "typeString": "function (bytes memory) pure returns (bytes32)"
+                                }
+                              },
+                              "id": 592,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "functionCall",
+                              "lValueRequested": false,
+                              "names": [],
+                              "nodeType": "FunctionCall",
+                              "src": "376:27:4",
+                              "tryCall": false,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_bytes32",
+                                "typeString": "bytes32"
+                              }
+                            },
+                            "src": "348:55:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_bytes32",
+                              "typeString": "bytes32"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_bytes32",
+                              "typeString": "bytes32"
+                            }
+                          ],
+                          "id": 586,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "nodeType": "ElementaryTypeNameExpression",
+                          "src": "341:6:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_bytes4_$",
+                            "typeString": "type(bytes4)"
+                          },
+                          "typeName": {
+                            "id": 585,
+                            "name": "bytes4",
+                            "nodeType": "ElementaryTypeName",
+                            "src": "341:6:4",
+                            "typeDescriptions": {}
+                          }
+                        },
+                        "id": 594,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "341:63:4",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes4",
+                          "typeString": "bytes4"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes4",
+                          "typeString": "bytes4"
+                        }
+                      ],
+                      "id": 584,
+                      "name": "_registerInterface",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 53,
+                      "src": "309:18:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_bytes4_$returns$__$",
+                        "typeString": "function (bytes4)"
+                      }
+                    },
+                    "id": 595,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "309:105:4",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 596,
+                  "nodeType": "ExpressionStatement",
+                  "src": "309:105:4"
+                },
+                {
+                  "expression": {
+                    "id": 599,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 597,
+                      "name": "_name",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 575,
+                      "src": "425:5:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage",
+                        "typeString": "string storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "id": 598,
+                      "name": "named",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 579,
+                      "src": "433:5:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_memory_ptr",
+                        "typeString": "string memory"
+                      }
+                    },
+                    "src": "425:13:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage",
+                      "typeString": "string storage ref"
+                    }
+                  },
+                  "id": 600,
+                  "nodeType": "ExpressionStatement",
+                  "src": "425:13:4"
+                },
+                {
+                  "expression": {
+                    "id": 603,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 601,
+                      "name": "_symbol",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 577,
+                      "src": "448:7:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage",
+                        "typeString": "string storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "id": 602,
+                      "name": "symbolified",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 581,
+                      "src": "458:11:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_memory_ptr",
+                        "typeString": "string memory"
+                      }
+                    },
+                    "src": "448:21:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage",
+                      "typeString": "string storage ref"
+                    }
+                  },
+                  "id": 604,
+                  "nodeType": "ExpressionStatement",
+                  "src": "448:21:4"
+                }
+              ]
+            },
+            "id": 606,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 582,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 579,
+                  "mutability": "mutable",
+                  "name": "named",
+                  "nameLocation": "265:5:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 606,
+                  "src": "251:19:4",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 578,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "251:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 581,
+                  "mutability": "mutable",
+                  "name": "symbolified",
+                  "nameLocation": "286:11:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 606,
+                  "src": "272:25:4",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 580,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "272:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "250:48:4"
+            },
+            "returnParameters": {
+              "id": 583,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "299:0:4"
+            },
+            "scope": 623,
+            "src": "239:237:4",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "baseFunctions": [
+              1005
+            ],
+            "body": {
+              "id": 613,
+              "nodeType": "Block",
+              "src": "536:29:4",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 611,
+                    "name": "_name",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 575,
+                    "src": "553:5:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage",
+                      "typeString": "string storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 610,
+                  "id": 612,
+                  "nodeType": "Return",
+                  "src": "546:12:4"
+                }
+              ]
+            },
+            "functionSelector": "06fdde03",
+            "id": 614,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "name",
+            "nameLocation": "491:4:4",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 607,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "495:2:4"
+            },
+            "returnParameters": {
+              "id": 610,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 609,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 614,
+                  "src": "521:13:4",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 608,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "521:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "520:15:4"
+            },
+            "scope": 623,
+            "src": "482:83:4",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "baseFunctions": [
+              1010
+            ],
+            "body": {
+              "id": 621,
+              "nodeType": "Block",
+              "src": "627:31:4",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 619,
+                    "name": "_symbol",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 577,
+                    "src": "644:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage",
+                      "typeString": "string storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 618,
+                  "id": 620,
+                  "nodeType": "Return",
+                  "src": "637:14:4"
+                }
+              ]
+            },
+            "functionSelector": "95d89b41",
+            "id": 622,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "symbol",
+            "nameLocation": "580:6:4",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 615,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "586:2:4"
+            },
+            "returnParameters": {
+              "id": 618,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 617,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 622,
+                  "src": "612:13:4",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 616,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "612:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "611:15:4"
+            },
+            "scope": 623,
+            "src": "571:87:4",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 624,
+        "src": "127:533:4",
+        "usedErrors": []
+      }
+    ],
+    "src": "33:628:4"
+  },
+  "bytecode": "608060405234801561001057600080fd5b5060405161057838038061057883398101604081905261002f9161028e565b6100587f01ffc9a7a5cef8baa21ed3c5c0d7e23accb804b619e9333b597f47a0d84076e26100b0565b6100817f6c5b7360b116f8fd1d2a1ccb905de5c6a9e91e31b88b8db3cd997e184f357e9f6100b0565b8151610094906001906020850190610133565b5080516100a8906002906020840190610133565b50505061032c565b6001600160e01b0319808216141561010e5760405162461bcd60e51b815260206004820152601960248201527f496e76616c696420696e74657266616365207265717565737400000000000000604482015260640160405180910390fd5b6001600160e01b0319166000908152602081905260409020805460ff19166001179055565b82805461013f906102f1565b90600052602060002090601f01602090048101928261016157600085556101a7565b82601f1061017a57805160ff19168380011785556101a7565b828001600101855582156101a7579182015b828111156101a757825182559160200191906001019061018c565b506101b39291506101b7565b5090565b5b808211156101b357600081556001016101b8565b634e487b7160e01b600052604160045260246000fd5b600082601f8301126101f357600080fd5b81516001600160401b038082111561020d5761020d6101cc565b604051601f8301601f19908116603f01168101908282118183101715610235576102356101cc565b8160405283815260209250868385880101111561025157600080fd5b600091505b838210156102735785820183015181830184015290820190610256565b838211156102845760008385830101525b9695505050505050565b600080604083850312156102a157600080fd5b82516001600160401b03808211156102b857600080fd5b6102c4868387016101e2565b935060208501519150808211156102da57600080fd5b506102e7858286016101e2565b9150509250929050565b600181811c9082168061030557607f821691505b6020821081141561032657634e487b7160e01b600052602260045260246000fd5b50919050565b61023d8061033b6000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c806301ffc9a71461004657806306fdde031461008857806395d89b411461009d575b600080fd5b610073610054366004610146565b6001600160e01b03191660009081526020819052604090205460ff1690565b60405190151581526020015b60405180910390f35b6100906100a5565b60405161007f9190610177565b610090610137565b6060600180546100b4906101cc565b80601f01602080910402602001604051908101604052809291908181526020018280546100e0906101cc565b801561012d5780601f106101025761010080835404028352916020019161012d565b820191906000526020600020905b81548152906001019060200180831161011057829003601f168201915b5050505050905090565b6060600280546100b4906101cc565b60006020828403121561015857600080fd5b81356001600160e01b03198116811461017057600080fd5b9392505050565b600060208083528351808285015260005b818110156101a457858101830151858201604001528201610188565b818111156101b6576000604083870101525b50601f01601f1916929092016040019392505050565b600181811c908216806101e057607f821691505b6020821081141561020157634e487b7160e01b600052602260045260246000fd5b5091905056fea2646970667358221220b27cb2f250468f6e5a3c4026e59b4a165f549f7fc3e081903af8ed1d9c57784e64736f6c634300080a0033",
+  "bytecodeSha1": "c929da2a70d0cdc50796bbfe574dae8658f858fd",
+  "compiler": {
+    "evm_version": "istanbul",
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "version": "0.8.10+commit.fc410830"
+  },
+  "contractName": "ERC721Metadata",
+  "coverageMap": {
+    "branches": {
+      "0": {},
+      "12": {},
+      "4": {},
+      "9": {}
+    },
+    "statements": {
+      "0": {
+        "ERC165.supportsInterface": {
+          "0": [
+            399,
+            439
+          ]
+        }
+      },
+      "12": {},
+      "4": {
+        "ERC721Metadata.name": {
+          "1": [
+            546,
+            558
+          ]
+        },
+        "ERC721Metadata.symbol": {
+          "2": [
+            637,
+            651
+          ]
+        }
+      },
+      "9": {}
+    }
+  },
+  "dependencies": [
+    "ERC165",
+    "IERC165",
+    "IERC721Metadata"
+  ],
+  "deployedBytecode": "608060405234801561001057600080fd5b50600436106100415760003560e01c806301ffc9a71461004657806306fdde031461008857806395d89b411461009d575b600080fd5b610073610054366004610146565b6001600160e01b03191660009081526020819052604090205460ff1690565b60405190151581526020015b60405180910390f35b6100906100a5565b60405161007f9190610177565b610090610137565b6060600180546100b4906101cc565b80601f01602080910402602001604051908101604052809291908181526020018280546100e0906101cc565b801561012d5780601f106101025761010080835404028352916020019161012d565b820191906000526020600020905b81548152906001019060200180831161011057829003601f168201915b5050505050905090565b6060600280546100b4906101cc565b60006020828403121561015857600080fd5b81356001600160e01b03198116811461017057600080fd5b9392505050565b600060208083528351808285015260005b818110156101a457858101830151858201604001528201610188565b818111156101b6576000604083870101525b50601f01601f1916929092016040019392505050565b600181811c908216806101e057607f821691505b6020821081141561020157634e487b7160e01b600052602260045260246000fd5b5091905056fea2646970667358221220b27cb2f250468f6e5a3c4026e59b4a165f549f7fc3e081903af8ed1d9c57784e64736f6c634300080a0033",
+  "deployedSourceMap": "127:533:4:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;290:156:0;;;;;;:::i;:::-;-1:-1:-1;;;;;;406:33:0;383:4;406:33;;;;;;;;;;;;;;290:156;;;;470:14:13;;463:22;445:41;;433:2;418:18;290:156:0;;;;;;;;482:83:4;;;:::i;:::-;;;;;;;:::i;571:87::-;;;:::i;482:83::-;521:13;553:5;546:12;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;482:83;:::o;571:87::-;612:13;644:7;637:14;;;;;:::i;14:286:13:-;72:6;125:2;113:9;104:7;100:23;96:32;93:52;;;141:1;138;131:12;93:52;167:23;;-1:-1:-1;;;;;;219:32:13;;209:43;;199:71;;266:1;263;256:12;199:71;289:5;14:286;-1:-1:-1;;;14:286:13:o;497:597::-;609:4;638:2;667;656:9;649:21;699:6;693:13;742:6;737:2;726:9;722:18;715:34;767:1;777:140;791:6;788:1;785:13;777:140;;;886:14;;;882:23;;876:30;852:17;;;871:2;848:26;841:66;806:10;;777:140;;;935:6;932:1;929:13;926:91;;;1005:1;1000:2;991:6;980:9;976:22;972:31;965:42;926:91;-1:-1:-1;1078:2:13;1057:15;-1:-1:-1;;1053:29:13;1038:45;;;;1085:2;1034:54;;497:597;-1:-1:-1;;;497:597:13:o;1099:380::-;1178:1;1174:12;;;;1221;;;1242:61;;1296:4;1288:6;1284:17;1274:27;;1242:61;1349:2;1341:6;1338:14;1318:18;1315:38;1312:161;;;1395:10;1390:3;1386:20;1383:1;1376:31;1430:4;1427:1;1420:15;1458:4;1455:1;1448:15;1312:161;;1099:380;;;:::o",
+  "language": "Solidity",
+  "natspec": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "offset": [
+    127,
+    660
+  ],
+  "opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH2 0x10 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x4 CALLDATASIZE LT PUSH2 0x41 JUMPI PUSH1 0x0 CALLDATALOAD PUSH1 0xE0 SHR DUP1 PUSH4 0x1FFC9A7 EQ PUSH2 0x46 JUMPI DUP1 PUSH4 0x6FDDE03 EQ PUSH2 0x88 JUMPI DUP1 PUSH4 0x95D89B41 EQ PUSH2 0x9D JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH2 0x73 PUSH2 0x54 CALLDATASIZE PUSH1 0x4 PUSH2 0x146 JUMP JUMPDEST PUSH1 0x1 PUSH1 0x1 PUSH1 0xE0 SHL SUB NOT AND PUSH1 0x0 SWAP1 DUP2 MSTORE PUSH1 0x20 DUP2 SWAP1 MSTORE PUSH1 0x40 SWAP1 KECCAK256 SLOAD PUSH1 0xFF AND SWAP1 JUMP JUMPDEST PUSH1 0x40 MLOAD SWAP1 ISZERO ISZERO DUP2 MSTORE PUSH1 0x20 ADD JUMPDEST PUSH1 0x40 MLOAD DUP1 SWAP2 SUB SWAP1 RETURN JUMPDEST PUSH2 0x90 PUSH2 0xA5 JUMP JUMPDEST PUSH1 0x40 MLOAD PUSH2 0x7F SWAP2 SWAP1 PUSH2 0x177 JUMP JUMPDEST PUSH2 0x90 PUSH2 0x137 JUMP JUMPDEST PUSH1 0x60 PUSH1 0x1 DUP1 SLOAD PUSH2 0xB4 SWAP1 PUSH2 0x1CC JUMP JUMPDEST DUP1 PUSH1 0x1F ADD PUSH1 0x20 DUP1 SWAP2 DIV MUL PUSH1 0x20 ADD PUSH1 0x40 MLOAD SWAP1 DUP2 ADD PUSH1 0x40 MSTORE DUP1 SWAP3 SWAP2 SWAP1 DUP2 DUP2 MSTORE PUSH1 0x20 ADD DUP3 DUP1 SLOAD PUSH2 0xE0 SWAP1 PUSH2 0x1CC JUMP JUMPDEST DUP1 ISZERO PUSH2 0x12D JUMPI DUP1 PUSH1 0x1F LT PUSH2 0x102 JUMPI PUSH2 0x100 DUP1 DUP4 SLOAD DIV MUL DUP4 MSTORE SWAP2 PUSH1 0x20 ADD SWAP2 PUSH2 0x12D JUMP JUMPDEST DUP3 ADD SWAP2 SWAP1 PUSH1 0x0 MSTORE PUSH1 0x20 PUSH1 0x0 KECCAK256 SWAP1 JUMPDEST DUP2 SLOAD DUP2 MSTORE SWAP1 PUSH1 0x1 ADD SWAP1 PUSH1 0x20 ADD DUP1 DUP4 GT PUSH2 0x110 JUMPI DUP3 SWAP1 SUB PUSH1 0x1F AND DUP3 ADD SWAP2 JUMPDEST POP POP POP POP POP SWAP1 POP SWAP1 JUMP JUMPDEST PUSH1 0x60 PUSH1 0x2 DUP1 SLOAD PUSH2 0xB4 SWAP1 PUSH2 0x1CC JUMP JUMPDEST PUSH1 0x0 PUSH1 0x20 DUP3 DUP5 SUB SLT ISZERO PUSH2 0x158 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST DUP2 CALLDATALOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xE0 SHL SUB NOT DUP2 AND DUP2 EQ PUSH2 0x170 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST SWAP4 SWAP3 POP POP POP JUMP JUMPDEST PUSH1 0x0 PUSH1 0x20 DUP1 DUP4 MSTORE DUP4 MLOAD DUP1 DUP3 DUP6 ADD MSTORE PUSH1 0x0 JUMPDEST DUP2 DUP2 LT ISZERO PUSH2 0x1A4 JUMPI DUP6 DUP2 ADD DUP4 ADD MLOAD DUP6 DUP3 ADD PUSH1 0x40 ADD MSTORE DUP3 ADD PUSH2 0x188 JUMP JUMPDEST DUP2 DUP2 GT ISZERO PUSH2 0x1B6 JUMPI PUSH1 0x0 PUSH1 0x40 DUP4 DUP8 ADD ADD MSTORE JUMPDEST POP PUSH1 0x1F ADD PUSH1 0x1F NOT AND SWAP3 SWAP1 SWAP3 ADD PUSH1 0x40 ADD SWAP4 SWAP3 POP POP POP JUMP JUMPDEST PUSH1 0x1 DUP2 DUP2 SHR SWAP1 DUP3 AND DUP1 PUSH2 0x1E0 JUMPI PUSH1 0x7F DUP3 AND SWAP2 POP JUMPDEST PUSH1 0x20 DUP3 LT DUP2 EQ ISZERO PUSH2 0x201 JUMPI PUSH4 0x4E487B71 PUSH1 0xE0 SHL PUSH1 0x0 MSTORE PUSH1 0x22 PUSH1 0x4 MSTORE PUSH1 0x24 PUSH1 0x0 REVERT JUMPDEST POP SWAP2 SWAP1 POP JUMP INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0xB2 PUSH29 0xB2F250468F6E5A3C4026E59B4A165F549F7FC3E081903AF8ED1D9C5778 0x4E PUSH5 0x736F6C6343 STOP ADDMOD EXP STOP CALLER ",
+  "pcMap": {
+    "0": {
+      "offset": [
+        127,
+        660
+      ],
+      "op": "PUSH1",
+      "path": "4",
+      "value": "0x80"
+    },
+    "2": {
+      "fn": null,
+      "offset": [
+        127,
+        660
+      ],
+      "op": "PUSH1",
+      "path": "4",
+      "value": "0x40"
+    },
+    "4": {
+      "fn": null,
+      "offset": [
+        127,
+        660
+      ],
+      "op": "MSTORE",
+      "path": "4"
+    },
+    "5": {
+      "fn": null,
+      "offset": [
+        127,
+        660
+      ],
+      "op": "CALLVALUE",
+      "path": "4"
+    },
+    "6": {
+      "fn": null,
+      "offset": [
+        127,
+        660
+      ],
+      "op": "DUP1",
+      "path": "4"
+    },
+    "7": {
+      "fn": null,
+      "offset": [
+        127,
+        660
+      ],
+      "op": "ISZERO",
+      "path": "4"
+    },
+    "8": {
+      "fn": null,
+      "offset": [
+        127,
+        660
+      ],
+      "op": "PUSH2",
+      "path": "4",
+      "value": "0x10"
+    },
+    "11": {
+      "fn": null,
+      "offset": [
+        127,
+        660
+      ],
+      "op": "JUMPI",
+      "path": "4"
+    },
+    "12": {
+      "fn": null,
+      "offset": [
+        127,
+        660
+      ],
+      "op": "PUSH1",
+      "path": "4",
+      "value": "0x0"
+    },
+    "14": {
+      "fn": null,
+      "offset": [
+        127,
+        660
+      ],
+      "op": "DUP1",
+      "path": "4"
+    },
+    "15": {
+      "dev": "Cannot send ether to nonpayable function",
+      "fn": null,
+      "offset": [
+        127,
+        660
+      ],
+      "op": "REVERT",
+      "path": "4"
+    },
+    "16": {
+      "fn": null,
+      "offset": [
+        127,
+        660
+      ],
+      "op": "JUMPDEST",
+      "path": "4"
+    },
+    "17": {
+      "fn": null,
+      "offset": [
+        127,
+        660
+      ],
+      "op": "POP",
+      "path": "4"
+    },
+    "18": {
+      "fn": null,
+      "offset": [
+        127,
+        660
+      ],
+      "op": "PUSH1",
+      "path": "4",
+      "value": "0x4"
+    },
+    "20": {
+      "fn": null,
+      "offset": [
+        127,
+        660
+      ],
+      "op": "CALLDATASIZE",
+      "path": "4"
+    },
+    "21": {
+      "fn": null,
+      "offset": [
+        127,
+        660
+      ],
+      "op": "LT",
+      "path": "4"
+    },
+    "22": {
+      "fn": null,
+      "offset": [
+        127,
+        660
+      ],
+      "op": "PUSH2",
+      "path": "4",
+      "value": "0x41"
+    },
+    "25": {
+      "fn": null,
+      "offset": [
+        127,
+        660
+      ],
+      "op": "JUMPI",
+      "path": "4"
+    },
+    "26": {
+      "fn": null,
+      "offset": [
+        127,
+        660
+      ],
+      "op": "PUSH1",
+      "path": "4",
+      "value": "0x0"
+    },
+    "28": {
+      "fn": null,
+      "offset": [
+        127,
+        660
+      ],
+      "op": "CALLDATALOAD",
+      "path": "4"
+    },
+    "29": {
+      "fn": null,
+      "offset": [
+        127,
+        660
+      ],
+      "op": "PUSH1",
+      "path": "4",
+      "value": "0xE0"
+    },
+    "31": {
+      "fn": null,
+      "offset": [
+        127,
+        660
+      ],
+      "op": "SHR",
+      "path": "4"
+    },
+    "32": {
+      "fn": null,
+      "offset": [
+        127,
+        660
+      ],
+      "op": "DUP1",
+      "path": "4"
+    },
+    "33": {
+      "fn": null,
+      "offset": [
+        127,
+        660
+      ],
+      "op": "PUSH4",
+      "path": "4",
+      "value": "0x1FFC9A7"
+    },
+    "38": {
+      "fn": null,
+      "offset": [
+        127,
+        660
+      ],
+      "op": "EQ",
+      "path": "4"
+    },
+    "39": {
+      "fn": null,
+      "offset": [
+        127,
+        660
+      ],
+      "op": "PUSH2",
+      "path": "4",
+      "value": "0x46"
+    },
+    "42": {
+      "fn": null,
+      "offset": [
+        127,
+        660
+      ],
+      "op": "JUMPI",
+      "path": "4"
+    },
+    "43": {
+      "fn": null,
+      "offset": [
+        127,
+        660
+      ],
+      "op": "DUP1",
+      "path": "4"
+    },
+    "44": {
+      "fn": null,
+      "offset": [
+        127,
+        660
+      ],
+      "op": "PUSH4",
+      "path": "4",
+      "value": "0x6FDDE03"
+    },
+    "49": {
+      "fn": null,
+      "offset": [
+        127,
+        660
+      ],
+      "op": "EQ",
+      "path": "4"
+    },
+    "50": {
+      "fn": null,
+      "offset": [
+        127,
+        660
+      ],
+      "op": "PUSH2",
+      "path": "4",
+      "value": "0x88"
+    },
+    "53": {
+      "fn": null,
+      "offset": [
+        127,
+        660
+      ],
+      "op": "JUMPI",
+      "path": "4"
+    },
+    "54": {
+      "fn": null,
+      "offset": [
+        127,
+        660
+      ],
+      "op": "DUP1",
+      "path": "4"
+    },
+    "55": {
+      "fn": null,
+      "offset": [
+        127,
+        660
+      ],
+      "op": "PUSH4",
+      "path": "4",
+      "value": "0x95D89B41"
+    },
+    "60": {
+      "fn": null,
+      "offset": [
+        127,
+        660
+      ],
+      "op": "EQ",
+      "path": "4"
+    },
+    "61": {
+      "fn": null,
+      "offset": [
+        127,
+        660
+      ],
+      "op": "PUSH2",
+      "path": "4",
+      "value": "0x9D"
+    },
+    "64": {
+      "fn": null,
+      "offset": [
+        127,
+        660
+      ],
+      "op": "JUMPI",
+      "path": "4"
+    },
+    "65": {
+      "fn": null,
+      "offset": [
+        127,
+        660
+      ],
+      "op": "JUMPDEST",
+      "path": "4"
+    },
+    "66": {
+      "fn": null,
+      "offset": [
+        127,
+        660
+      ],
+      "op": "PUSH1",
+      "path": "4",
+      "value": "0x0"
+    },
+    "68": {
+      "fn": null,
+      "offset": [
+        127,
+        660
+      ],
+      "op": "DUP1",
+      "path": "4"
+    },
+    "69": {
+      "first_revert": true,
+      "fn": null,
+      "offset": [
+        127,
+        660
+      ],
+      "op": "REVERT",
+      "path": "4"
+    },
+    "70": {
+      "fn": "ERC165.supportsInterface",
+      "offset": [
+        290,
+        446
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "71": {
+      "fn": "ERC165.supportsInterface",
+      "offset": [
+        290,
+        446
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x73"
+    },
+    "74": {
+      "fn": "ERC165.supportsInterface",
+      "offset": [
+        290,
+        446
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x54"
+    },
+    "77": {
+      "fn": "ERC165.supportsInterface",
+      "offset": [
+        290,
+        446
+      ],
+      "op": "CALLDATASIZE",
+      "path": "0"
+    },
+    "78": {
+      "fn": "ERC165.supportsInterface",
+      "offset": [
+        290,
+        446
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "80": {
+      "fn": "ERC165.supportsInterface",
+      "offset": [
+        290,
+        446
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x146"
+    },
+    "83": {
+      "fn": "ERC165.supportsInterface",
+      "jump": "i",
+      "offset": [
+        290,
+        446
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "84": {
+      "fn": "ERC165.supportsInterface",
+      "offset": [
+        290,
+        446
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "85": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "87": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "89": {
+      "op": "PUSH1",
+      "value": "0xE0"
+    },
+    "91": {
+      "op": "SHL"
+    },
+    "92": {
+      "op": "SUB"
+    },
+    "93": {
+      "op": "NOT"
+    },
+    "94": {
+      "fn": "ERC165.supportsInterface",
+      "offset": [
+        406,
+        439
+      ],
+      "op": "AND",
+      "path": "0",
+      "statement": 0
+    },
+    "95": {
+      "fn": "ERC165.supportsInterface",
+      "offset": [
+        383,
+        387
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "97": {
+      "fn": "ERC165.supportsInterface",
+      "offset": [
+        406,
+        439
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "98": {
+      "fn": "ERC165.supportsInterface",
+      "offset": [
+        406,
+        439
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "99": {
+      "fn": "ERC165.supportsInterface",
+      "offset": [
+        406,
+        439
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "100": {
+      "fn": "ERC165.supportsInterface",
+      "offset": [
+        406,
+        439
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "102": {
+      "fn": "ERC165.supportsInterface",
+      "offset": [
+        406,
+        439
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "103": {
+      "fn": "ERC165.supportsInterface",
+      "offset": [
+        406,
+        439
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "104": {
+      "fn": "ERC165.supportsInterface",
+      "offset": [
+        406,
+        439
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "105": {
+      "fn": "ERC165.supportsInterface",
+      "offset": [
+        406,
+        439
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "107": {
+      "fn": "ERC165.supportsInterface",
+      "offset": [
+        406,
+        439
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "108": {
+      "fn": "ERC165.supportsInterface",
+      "offset": [
+        406,
+        439
+      ],
+      "op": "KECCAK256",
+      "path": "0"
+    },
+    "109": {
+      "fn": "ERC165.supportsInterface",
+      "offset": [
+        406,
+        439
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "110": {
+      "fn": "ERC165.supportsInterface",
+      "offset": [
+        406,
+        439
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0xFF"
+    },
+    "112": {
+      "fn": "ERC165.supportsInterface",
+      "offset": [
+        406,
+        439
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "113": {
+      "fn": "ERC165.supportsInterface",
+      "offset": [
+        406,
+        439
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "114": {
+      "fn": "ERC165.supportsInterface",
+      "offset": [
+        290,
+        446
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "115": {
+      "fn": "ERC165.supportsInterface",
+      "offset": [
+        290,
+        446
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "116": {
+      "fn": "ERC165.supportsInterface",
+      "offset": [
+        290,
+        446
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "118": {
+      "fn": "ERC165.supportsInterface",
+      "offset": [
+        290,
+        446
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "119": {
+      "op": "SWAP1"
+    },
+    "120": {
+      "op": "ISZERO"
+    },
+    "121": {
+      "op": "ISZERO"
+    },
+    "122": {
+      "op": "DUP2"
+    },
+    "123": {
+      "op": "MSTORE"
+    },
+    "124": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "126": {
+      "op": "ADD"
+    },
+    "127": {
+      "fn": "ERC165.supportsInterface",
+      "offset": [
+        290,
+        446
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "128": {
+      "fn": "ERC165.supportsInterface",
+      "offset": [
+        290,
+        446
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "130": {
+      "fn": "ERC165.supportsInterface",
+      "offset": [
+        290,
+        446
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "131": {
+      "fn": "ERC165.supportsInterface",
+      "offset": [
+        290,
+        446
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "132": {
+      "fn": "ERC165.supportsInterface",
+      "offset": [
+        290,
+        446
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "133": {
+      "fn": "ERC165.supportsInterface",
+      "offset": [
+        290,
+        446
+      ],
+      "op": "SUB",
+      "path": "0"
+    },
+    "134": {
+      "fn": "ERC165.supportsInterface",
+      "offset": [
+        290,
+        446
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "135": {
+      "fn": "ERC165.supportsInterface",
+      "offset": [
+        290,
+        446
+      ],
+      "op": "RETURN",
+      "path": "0"
+    },
+    "136": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        482,
+        565
+      ],
+      "op": "JUMPDEST",
+      "path": "4"
+    },
+    "137": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        482,
+        565
+      ],
+      "op": "PUSH2",
+      "path": "4",
+      "value": "0x90"
+    },
+    "140": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        482,
+        565
+      ],
+      "op": "PUSH2",
+      "path": "4",
+      "value": "0xA5"
+    },
+    "143": {
+      "fn": "ERC721Metadata.name",
+      "jump": "i",
+      "offset": [
+        482,
+        565
+      ],
+      "op": "JUMP",
+      "path": "4"
+    },
+    "144": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        482,
+        565
+      ],
+      "op": "JUMPDEST",
+      "path": "4"
+    },
+    "145": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        482,
+        565
+      ],
+      "op": "PUSH1",
+      "path": "4",
+      "value": "0x40"
+    },
+    "147": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        482,
+        565
+      ],
+      "op": "MLOAD",
+      "path": "4"
+    },
+    "148": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        482,
+        565
+      ],
+      "op": "PUSH2",
+      "path": "4",
+      "value": "0x7F"
+    },
+    "151": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        482,
+        565
+      ],
+      "op": "SWAP2",
+      "path": "4"
+    },
+    "152": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        482,
+        565
+      ],
+      "op": "SWAP1",
+      "path": "4"
+    },
+    "153": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        482,
+        565
+      ],
+      "op": "PUSH2",
+      "path": "4",
+      "value": "0x177"
+    },
+    "156": {
+      "fn": "ERC721Metadata.name",
+      "jump": "i",
+      "offset": [
+        482,
+        565
+      ],
+      "op": "JUMP",
+      "path": "4"
+    },
+    "157": {
+      "fn": "ERC721Metadata.symbol",
+      "offset": [
+        571,
+        658
+      ],
+      "op": "JUMPDEST",
+      "path": "4"
+    },
+    "158": {
+      "fn": "ERC721Metadata.symbol",
+      "offset": [
+        571,
+        658
+      ],
+      "op": "PUSH2",
+      "path": "4",
+      "value": "0x90"
+    },
+    "161": {
+      "fn": "ERC721Metadata.symbol",
+      "offset": [
+        571,
+        658
+      ],
+      "op": "PUSH2",
+      "path": "4",
+      "value": "0x137"
+    },
+    "164": {
+      "fn": "ERC721Metadata.symbol",
+      "jump": "i",
+      "offset": [
+        571,
+        658
+      ],
+      "op": "JUMP",
+      "path": "4"
+    },
+    "165": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        482,
+        565
+      ],
+      "op": "JUMPDEST",
+      "path": "4"
+    },
+    "166": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        521,
+        534
+      ],
+      "op": "PUSH1",
+      "path": "4",
+      "value": "0x60"
+    },
+    "168": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        553,
+        558
+      ],
+      "op": "PUSH1",
+      "path": "4",
+      "statement": 1,
+      "value": "0x1"
+    },
+    "170": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "DUP1",
+      "path": "4"
+    },
+    "171": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "SLOAD",
+      "path": "4"
+    },
+    "172": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "PUSH2",
+      "path": "4",
+      "value": "0xB4"
+    },
+    "175": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "SWAP1",
+      "path": "4"
+    },
+    "176": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "PUSH2",
+      "path": "4",
+      "value": "0x1CC"
+    },
+    "179": {
+      "fn": "ERC721Metadata.name",
+      "jump": "i",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "JUMP",
+      "path": "4"
+    },
+    "180": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "JUMPDEST",
+      "path": "4"
+    },
+    "181": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "DUP1",
+      "path": "4"
+    },
+    "182": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "PUSH1",
+      "path": "4",
+      "value": "0x1F"
+    },
+    "184": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "ADD",
+      "path": "4"
+    },
+    "185": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "PUSH1",
+      "path": "4",
+      "value": "0x20"
+    },
+    "187": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "DUP1",
+      "path": "4"
+    },
+    "188": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "SWAP2",
+      "path": "4"
+    },
+    "189": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "DIV",
+      "path": "4"
+    },
+    "190": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "MUL",
+      "path": "4"
+    },
+    "191": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "PUSH1",
+      "path": "4",
+      "value": "0x20"
+    },
+    "193": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "ADD",
+      "path": "4"
+    },
+    "194": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "PUSH1",
+      "path": "4",
+      "value": "0x40"
+    },
+    "196": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "MLOAD",
+      "path": "4"
+    },
+    "197": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "SWAP1",
+      "path": "4"
+    },
+    "198": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "DUP2",
+      "path": "4"
+    },
+    "199": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "ADD",
+      "path": "4"
+    },
+    "200": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "PUSH1",
+      "path": "4",
+      "value": "0x40"
+    },
+    "202": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "MSTORE",
+      "path": "4"
+    },
+    "203": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "DUP1",
+      "path": "4"
+    },
+    "204": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "SWAP3",
+      "path": "4"
+    },
+    "205": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "SWAP2",
+      "path": "4"
+    },
+    "206": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "SWAP1",
+      "path": "4"
+    },
+    "207": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "DUP2",
+      "path": "4"
+    },
+    "208": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "DUP2",
+      "path": "4"
+    },
+    "209": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "MSTORE",
+      "path": "4"
+    },
+    "210": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "PUSH1",
+      "path": "4",
+      "value": "0x20"
+    },
+    "212": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "ADD",
+      "path": "4"
+    },
+    "213": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "DUP3",
+      "path": "4"
+    },
+    "214": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "DUP1",
+      "path": "4"
+    },
+    "215": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "SLOAD",
+      "path": "4"
+    },
+    "216": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "PUSH2",
+      "path": "4",
+      "value": "0xE0"
+    },
+    "219": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "SWAP1",
+      "path": "4"
+    },
+    "220": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "PUSH2",
+      "path": "4",
+      "value": "0x1CC"
+    },
+    "223": {
+      "fn": "ERC721Metadata.name",
+      "jump": "i",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "JUMP",
+      "path": "4"
+    },
+    "224": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "JUMPDEST",
+      "path": "4"
+    },
+    "225": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "DUP1",
+      "path": "4"
+    },
+    "226": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "ISZERO",
+      "path": "4"
+    },
+    "227": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "PUSH2",
+      "path": "4",
+      "value": "0x12D"
+    },
+    "230": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "JUMPI",
+      "path": "4"
+    },
+    "231": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "DUP1",
+      "path": "4"
+    },
+    "232": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "PUSH1",
+      "path": "4",
+      "value": "0x1F"
+    },
+    "234": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "LT",
+      "path": "4"
+    },
+    "235": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "PUSH2",
+      "path": "4",
+      "value": "0x102"
+    },
+    "238": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "JUMPI",
+      "path": "4"
+    },
+    "239": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "PUSH2",
+      "path": "4",
+      "value": "0x100"
+    },
+    "242": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "DUP1",
+      "path": "4"
+    },
+    "243": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "DUP4",
+      "path": "4"
+    },
+    "244": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "SLOAD",
+      "path": "4"
+    },
+    "245": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "DIV",
+      "path": "4"
+    },
+    "246": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "MUL",
+      "path": "4"
+    },
+    "247": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "DUP4",
+      "path": "4"
+    },
+    "248": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "MSTORE",
+      "path": "4"
+    },
+    "249": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "SWAP2",
+      "path": "4"
+    },
+    "250": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "PUSH1",
+      "path": "4",
+      "value": "0x20"
+    },
+    "252": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "ADD",
+      "path": "4"
+    },
+    "253": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "SWAP2",
+      "path": "4"
+    },
+    "254": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "PUSH2",
+      "path": "4",
+      "value": "0x12D"
+    },
+    "257": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "JUMP",
+      "path": "4"
+    },
+    "258": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "JUMPDEST",
+      "path": "4"
+    },
+    "259": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "DUP3",
+      "path": "4"
+    },
+    "260": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "ADD",
+      "path": "4"
+    },
+    "261": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "SWAP2",
+      "path": "4"
+    },
+    "262": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "SWAP1",
+      "path": "4"
+    },
+    "263": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "PUSH1",
+      "path": "4",
+      "value": "0x0"
+    },
+    "265": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "MSTORE",
+      "path": "4"
+    },
+    "266": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "PUSH1",
+      "path": "4",
+      "value": "0x20"
+    },
+    "268": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "PUSH1",
+      "path": "4",
+      "value": "0x0"
+    },
+    "270": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "KECCAK256",
+      "path": "4"
+    },
+    "271": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "SWAP1",
+      "path": "4"
+    },
+    "272": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "JUMPDEST",
+      "path": "4"
+    },
+    "273": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "DUP2",
+      "path": "4"
+    },
+    "274": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "SLOAD",
+      "path": "4"
+    },
+    "275": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "DUP2",
+      "path": "4"
+    },
+    "276": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "MSTORE",
+      "path": "4"
+    },
+    "277": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "SWAP1",
+      "path": "4"
+    },
+    "278": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "PUSH1",
+      "path": "4",
+      "value": "0x1"
+    },
+    "280": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "ADD",
+      "path": "4"
+    },
+    "281": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "SWAP1",
+      "path": "4"
+    },
+    "282": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "PUSH1",
+      "path": "4",
+      "value": "0x20"
+    },
+    "284": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "ADD",
+      "path": "4"
+    },
+    "285": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "DUP1",
+      "path": "4"
+    },
+    "286": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "DUP4",
+      "path": "4"
+    },
+    "287": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "GT",
+      "path": "4"
+    },
+    "288": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "PUSH2",
+      "path": "4",
+      "value": "0x110"
+    },
+    "291": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "JUMPI",
+      "path": "4"
+    },
+    "292": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "DUP3",
+      "path": "4"
+    },
+    "293": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "SWAP1",
+      "path": "4"
+    },
+    "294": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "SUB",
+      "path": "4"
+    },
+    "295": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "PUSH1",
+      "path": "4",
+      "value": "0x1F"
+    },
+    "297": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "AND",
+      "path": "4"
+    },
+    "298": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "DUP3",
+      "path": "4"
+    },
+    "299": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "ADD",
+      "path": "4"
+    },
+    "300": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "SWAP2",
+      "path": "4"
+    },
+    "301": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "JUMPDEST",
+      "path": "4"
+    },
+    "302": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "POP",
+      "path": "4"
+    },
+    "303": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "POP",
+      "path": "4"
+    },
+    "304": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "POP",
+      "path": "4"
+    },
+    "305": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "POP",
+      "path": "4"
+    },
+    "306": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "POP",
+      "path": "4"
+    },
+    "307": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "SWAP1",
+      "path": "4"
+    },
+    "308": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        546,
+        558
+      ],
+      "op": "POP",
+      "path": "4"
+    },
+    "309": {
+      "fn": "ERC721Metadata.name",
+      "offset": [
+        482,
+        565
+      ],
+      "op": "SWAP1",
+      "path": "4"
+    },
+    "310": {
+      "fn": "ERC721Metadata.name",
+      "jump": "o",
+      "offset": [
+        482,
+        565
+      ],
+      "op": "JUMP",
+      "path": "4"
+    },
+    "311": {
+      "fn": "ERC721Metadata.symbol",
+      "offset": [
+        571,
+        658
+      ],
+      "op": "JUMPDEST",
+      "path": "4"
+    },
+    "312": {
+      "fn": "ERC721Metadata.symbol",
+      "offset": [
+        612,
+        625
+      ],
+      "op": "PUSH1",
+      "path": "4",
+      "value": "0x60"
+    },
+    "314": {
+      "fn": "ERC721Metadata.symbol",
+      "offset": [
+        644,
+        651
+      ],
+      "op": "PUSH1",
+      "path": "4",
+      "statement": 2,
+      "value": "0x2"
+    },
+    "316": {
+      "fn": "ERC721Metadata.symbol",
+      "offset": [
+        637,
+        651
+      ],
+      "op": "DUP1",
+      "path": "4"
+    },
+    "317": {
+      "fn": "ERC721Metadata.symbol",
+      "offset": [
+        637,
+        651
+      ],
+      "op": "SLOAD",
+      "path": "4"
+    },
+    "318": {
+      "fn": "ERC721Metadata.symbol",
+      "offset": [
+        637,
+        651
+      ],
+      "op": "PUSH2",
+      "path": "4",
+      "value": "0xB4"
+    },
+    "321": {
+      "fn": "ERC721Metadata.symbol",
+      "offset": [
+        637,
+        651
+      ],
+      "op": "SWAP1",
+      "path": "4"
+    },
+    "322": {
+      "fn": "ERC721Metadata.symbol",
+      "offset": [
+        637,
+        651
+      ],
+      "op": "PUSH2",
+      "path": "4",
+      "value": "0x1CC"
+    },
+    "325": {
+      "fn": "ERC721Metadata.symbol",
+      "jump": "i",
+      "offset": [
+        637,
+        651
+      ],
+      "op": "JUMP",
+      "path": "4"
+    },
+    "326": {
+      "op": "JUMPDEST"
+    },
+    "327": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "329": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "331": {
+      "op": "DUP3"
+    },
+    "332": {
+      "op": "DUP5"
+    },
+    "333": {
+      "op": "SUB"
+    },
+    "334": {
+      "op": "SLT"
+    },
+    "335": {
+      "op": "ISZERO"
+    },
+    "336": {
+      "op": "PUSH2",
+      "value": "0x158"
+    },
+    "339": {
+      "op": "JUMPI"
+    },
+    "340": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "342": {
+      "op": "DUP1"
+    },
+    "343": {
+      "op": "REVERT"
+    },
+    "344": {
+      "op": "JUMPDEST"
+    },
+    "345": {
+      "op": "DUP2"
+    },
+    "346": {
+      "op": "CALLDATALOAD"
+    },
+    "347": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "349": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "351": {
+      "op": "PUSH1",
+      "value": "0xE0"
+    },
+    "353": {
+      "op": "SHL"
+    },
+    "354": {
+      "op": "SUB"
+    },
+    "355": {
+      "op": "NOT"
+    },
+    "356": {
+      "op": "DUP2"
+    },
+    "357": {
+      "op": "AND"
+    },
+    "358": {
+      "op": "DUP2"
+    },
+    "359": {
+      "op": "EQ"
+    },
+    "360": {
+      "op": "PUSH2",
+      "value": "0x170"
+    },
+    "363": {
+      "op": "JUMPI"
+    },
+    "364": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "366": {
+      "op": "DUP1"
+    },
+    "367": {
+      "op": "REVERT"
+    },
+    "368": {
+      "op": "JUMPDEST"
+    },
+    "369": {
+      "op": "SWAP4"
+    },
+    "370": {
+      "op": "SWAP3"
+    },
+    "371": {
+      "op": "POP"
+    },
+    "372": {
+      "op": "POP"
+    },
+    "373": {
+      "op": "POP"
+    },
+    "374": {
+      "jump": "o",
+      "op": "JUMP"
+    },
+    "375": {
+      "op": "JUMPDEST"
+    },
+    "376": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "378": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "380": {
+      "op": "DUP1"
+    },
+    "381": {
+      "op": "DUP4"
+    },
+    "382": {
+      "op": "MSTORE"
+    },
+    "383": {
+      "op": "DUP4"
+    },
+    "384": {
+      "op": "MLOAD"
+    },
+    "385": {
+      "op": "DUP1"
+    },
+    "386": {
+      "op": "DUP3"
+    },
+    "387": {
+      "op": "DUP6"
+    },
+    "388": {
+      "op": "ADD"
+    },
+    "389": {
+      "op": "MSTORE"
+    },
+    "390": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "392": {
+      "op": "JUMPDEST"
+    },
+    "393": {
+      "op": "DUP2"
+    },
+    "394": {
+      "op": "DUP2"
+    },
+    "395": {
+      "op": "LT"
+    },
+    "396": {
+      "op": "ISZERO"
+    },
+    "397": {
+      "op": "PUSH2",
+      "value": "0x1A4"
+    },
+    "400": {
+      "op": "JUMPI"
+    },
+    "401": {
+      "op": "DUP6"
+    },
+    "402": {
+      "op": "DUP2"
+    },
+    "403": {
+      "op": "ADD"
+    },
+    "404": {
+      "op": "DUP4"
+    },
+    "405": {
+      "op": "ADD"
+    },
+    "406": {
+      "op": "MLOAD"
+    },
+    "407": {
+      "op": "DUP6"
+    },
+    "408": {
+      "op": "DUP3"
+    },
+    "409": {
+      "op": "ADD"
+    },
+    "410": {
+      "op": "PUSH1",
+      "value": "0x40"
+    },
+    "412": {
+      "op": "ADD"
+    },
+    "413": {
+      "op": "MSTORE"
+    },
+    "414": {
+      "op": "DUP3"
+    },
+    "415": {
+      "op": "ADD"
+    },
+    "416": {
+      "op": "PUSH2",
+      "value": "0x188"
+    },
+    "419": {
+      "op": "JUMP"
+    },
+    "420": {
+      "op": "JUMPDEST"
+    },
+    "421": {
+      "op": "DUP2"
+    },
+    "422": {
+      "op": "DUP2"
+    },
+    "423": {
+      "op": "GT"
+    },
+    "424": {
+      "op": "ISZERO"
+    },
+    "425": {
+      "op": "PUSH2",
+      "value": "0x1B6"
+    },
+    "428": {
+      "op": "JUMPI"
+    },
+    "429": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "431": {
+      "op": "PUSH1",
+      "value": "0x40"
+    },
+    "433": {
+      "op": "DUP4"
+    },
+    "434": {
+      "op": "DUP8"
+    },
+    "435": {
+      "op": "ADD"
+    },
+    "436": {
+      "op": "ADD"
+    },
+    "437": {
+      "op": "MSTORE"
+    },
+    "438": {
+      "op": "JUMPDEST"
+    },
+    "439": {
+      "op": "POP"
+    },
+    "440": {
+      "op": "PUSH1",
+      "value": "0x1F"
+    },
+    "442": {
+      "op": "ADD"
+    },
+    "443": {
+      "op": "PUSH1",
+      "value": "0x1F"
+    },
+    "445": {
+      "op": "NOT"
+    },
+    "446": {
+      "op": "AND"
+    },
+    "447": {
+      "op": "SWAP3"
+    },
+    "448": {
+      "op": "SWAP1"
+    },
+    "449": {
+      "op": "SWAP3"
+    },
+    "450": {
+      "op": "ADD"
+    },
+    "451": {
+      "op": "PUSH1",
+      "value": "0x40"
+    },
+    "453": {
+      "op": "ADD"
+    },
+    "454": {
+      "op": "SWAP4"
+    },
+    "455": {
+      "op": "SWAP3"
+    },
+    "456": {
+      "op": "POP"
+    },
+    "457": {
+      "op": "POP"
+    },
+    "458": {
+      "op": "POP"
+    },
+    "459": {
+      "jump": "o",
+      "op": "JUMP"
+    },
+    "460": {
+      "op": "JUMPDEST"
+    },
+    "461": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "463": {
+      "op": "DUP2"
+    },
+    "464": {
+      "op": "DUP2"
+    },
+    "465": {
+      "op": "SHR"
+    },
+    "466": {
+      "op": "SWAP1"
+    },
+    "467": {
+      "op": "DUP3"
+    },
+    "468": {
+      "op": "AND"
+    },
+    "469": {
+      "op": "DUP1"
+    },
+    "470": {
+      "op": "PUSH2",
+      "value": "0x1E0"
+    },
+    "473": {
+      "op": "JUMPI"
+    },
+    "474": {
+      "op": "PUSH1",
+      "value": "0x7F"
+    },
+    "476": {
+      "op": "DUP3"
+    },
+    "477": {
+      "op": "AND"
+    },
+    "478": {
+      "op": "SWAP2"
+    },
+    "479": {
+      "op": "POP"
+    },
+    "480": {
+      "op": "JUMPDEST"
+    },
+    "481": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "483": {
+      "op": "DUP3"
+    },
+    "484": {
+      "op": "LT"
+    },
+    "485": {
+      "op": "DUP2"
+    },
+    "486": {
+      "op": "EQ"
+    },
+    "487": {
+      "op": "ISZERO"
+    },
+    "488": {
+      "op": "PUSH2",
+      "value": "0x201"
+    },
+    "491": {
+      "op": "JUMPI"
+    },
+    "492": {
+      "op": "PUSH4",
+      "value": "0x4E487B71"
+    },
+    "497": {
+      "op": "PUSH1",
+      "value": "0xE0"
+    },
+    "499": {
+      "op": "SHL"
+    },
+    "500": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "502": {
+      "op": "MSTORE"
+    },
+    "503": {
+      "op": "PUSH1",
+      "value": "0x22"
+    },
+    "505": {
+      "op": "PUSH1",
+      "value": "0x4"
+    },
+    "507": {
+      "op": "MSTORE"
+    },
+    "508": {
+      "op": "PUSH1",
+      "value": "0x24"
+    },
+    "510": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "512": {
+      "op": "REVERT"
+    },
+    "513": {
+      "op": "JUMPDEST"
+    },
+    "514": {
+      "op": "POP"
+    },
+    "515": {
+      "op": "SWAP2"
+    },
+    "516": {
+      "op": "SWAP1"
+    },
+    "517": {
+      "op": "POP"
+    },
+    "518": {
+      "jump": "o",
+      "op": "JUMP"
+    }
+  },
+  "sha1": "569906ad0bbb39c91840689721257a4dfb38de55",
+  "source": "// SPDX-License-Identifier: MIT\n\npragma solidity ^0.8.10;\n\nimport \"../interfaces/IERC721Metadata.sol\";\nimport \"./ERC165.sol\";\n\ncontract ERC721Metadata is IERC721Metadata, ERC165 {\n    string private _name;\n    string private _symbol;\n\n    constructor(string memory named, string memory symbolified) {\n        _registerInterface(\n            bytes4(keccak256(\"name(bytes4)\") ^ keccak256(\"symbol(bytes4)\"))\n        );\n\n        _name = named;\n        _symbol = symbolified;\n    }\n\n    function name() external view returns (string memory) {\n        return _name;\n    }\n\n    function symbol() external view returns (string memory) {\n        return _symbol;\n    }\n}\n",
+  "sourceMap": "127:533:4:-:0;;;239:237;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;211:66:0;237:38;211:18;:66::i;:::-;309:105:4;348:55;309:18;:105::i;:::-;425:13;;;;:5;;:13;;;;;:::i;:::-;-1:-1:-1;448:21:4;;;;:7;;:21;;;;;:::i;:::-;;239:237;;127:533;;452:187:0;-1:-1:-1;;;;;;527:25:0;;;;;519:63;;;;-1:-1:-1;;;519:63:0;;1805:2:13;519:63:0;;;1787:21:13;1844:2;1824:18;;;1817:30;1883:27;1863:18;;;1856:55;1928:18;;519:63:0;;;;;;;;-1:-1:-1;;;;;;592:33:0;:20;:33;;;;;;;;;;:40;;-1:-1:-1;;592:40:0;628:4;592:40;;;452:187::o;127:533:4:-;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;127:533:4;;;-1:-1:-1;127:533:4;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;14:127:13;75:10;70:3;66:20;63:1;56:31;106:4;103:1;96:15;130:4;127:1;120:15;146:885;200:5;253:3;246:4;238:6;234:17;230:27;220:55;;271:1;268;261:12;220:55;294:13;;-1:-1:-1;;;;;356:10:13;;;353:36;;;369:18;;:::i;:::-;444:2;438:9;412:2;498:13;;-1:-1:-1;;494:22:13;;;518:2;490:31;486:40;474:53;;;542:18;;;562:22;;;539:46;536:72;;;588:18;;:::i;:::-;628:10;624:2;617:22;663:2;655:6;648:18;685:4;675:14;;730:3;725:2;720;712:6;708:15;704:24;701:33;698:53;;;747:1;744;737:12;698:53;769:1;760:10;;779:133;793:2;790:1;787:9;779:133;;;881:14;;;877:23;;871:30;850:14;;;846:23;;839:63;804:10;;;;779:133;;;930:2;927:1;924:9;921:80;;;989:1;984:2;979;971:6;967:15;963:24;956:35;921:80;1019:6;146:885;-1:-1:-1;;;;;;146:885:13:o;1036:562::-;1135:6;1143;1196:2;1184:9;1175:7;1171:23;1167:32;1164:52;;;1212:1;1209;1202:12;1164:52;1239:16;;-1:-1:-1;;;;;1304:14:13;;;1301:34;;;1331:1;1328;1321:12;1301:34;1354:61;1407:7;1398:6;1387:9;1383:22;1354:61;:::i;:::-;1344:71;;1461:2;1450:9;1446:18;1440:25;1424:41;;1490:2;1480:8;1477:16;1474:36;;;1506:1;1503;1496:12;1474:36;;1529:63;1584:7;1573:8;1562:9;1558:24;1529:63;:::i;:::-;1519:73;;;1036:562;;;;;:::o;1957:380::-;2036:1;2032:12;;;;2079;;;2100:61;;2154:4;2146:6;2142:17;2132:27;;2100:61;2207:2;2199:6;2196:14;2176:18;2173:38;2170:161;;;2253:10;2248:3;2244:20;2241:1;2234:31;2288:4;2285:1;2278:15;2316:4;2313:1;2306:15;2170:161;;1957:380;;;:::o;:::-;127:533:4;;;;;;",
+  "sourcePath": "contracts/ERC721Metadata.sol",
+  "type": "contract"
+}

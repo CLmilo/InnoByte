@@ -1,0 +1,23 @@
+{
+  "contracts": {
+    "Counters": "1ce946f6a4eaa185320328620ccf999b9e86db7c",
+    "ERC165": "ea68e68d9869d067be51254453f7caa0a4cccb5d",
+    "ERC721": "07366613addde2335a50d150195035848db9ac8b",
+    "ERC721Connector": "97e3fae6bf9e267b106be0a10a7c18abc05d7398",
+    "ERC721Enumerable": "bd7837120fe6a9aa196ea46dde067143713c271b",
+    "ERC721Metadata": "c929da2a70d0cdc50796bbfe574dae8658f858fd",
+    "InnoByte": "c264ac025a0d6dbaee287ced648a2da6eb721da4",
+    "Migrations": "c044cf41ad41b6dfbfb11467e0f13bdfc0029eba",
+    "SafeMath": "1ce946f6a4eaa185320328620ccf999b9e86db7c"
+  },
+  "tests": {
+    "tests/test_simple.py": {
+      "coverage": false,
+      "isolated": false,
+      "results": "..",
+      "sha1": "064671bce64c4ed490b37cd892014194ac8533c3",
+      "txhash": []
+    }
+  },
+  "tx": {}
+}
